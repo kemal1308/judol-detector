@@ -1,10 +1,10 @@
-# 🛡️ Judol Detector
+# Judol Detector
 
 Judol Detector adalah platform SaaS berbasis web yang dirancang khusus untuk membantu YouTuber Indonesia melindungi channel mereka dari serangan komentar spam judi online (judol) secara otomatis menggunakan Machine Learning. 
 
 Komentar spam sering kali menggunakan teknik penyamaran (unicode font, leetspeak, dll). Aplikasi ini menggunakan sistem deteksi 5 lapis (termasuk model Machine Learning) dengan akurasi tinggi untuk mendeteksi dan menghapus komentar tersebut 24/7 tanpa intervensi manual.
 
-## ✨ Fitur Utama
+## Fitur Utama
 
 - **Login YouTube OAuth**: Masuk dengan aman menggunakan akun Google/YouTube Anda.
 - **Auto Monitoring**: Sistem mengecek komentar baru pada video yang didaftarkan secara berkala.
@@ -13,7 +13,7 @@ Komentar spam sering kali menggunakan teknik penyamaran (unicode font, leetspeak
 - **Dashboard Interaktif**: Antarmuka React yang modern untuk melihat statistik, mengelola video, dan melihat riwayat komentar yang dihapus.
 - **Tahan Teknik Penyamaran**: Mampu menormalisasi dan mendeteksi teks dengan *unicode font* (contoh: 𝒔𝒍𝒐𝒕), *leetspeak* (g4c0r), dan simbol pengganti huruf.
 
-## 🛠️ Teknologi yang Digunakan
+## Teknologi yang Digunakan
 
 **Backend:**
 - Python 3 & FastAPI
@@ -100,7 +100,7 @@ npm run dev
 ```
 Aplikasi web bisa diakses melalui browser pada alamat `http://localhost:5173`.
 
-## 🧠 Tentang Model Machine Learning
+## Tentang Model Machine Learning
 
 Karena batasan limit ukuran file di GitHub (maksimal 100MB per file), file model IndoBERT yang ukurannya sangat besar (`model.safetensors` & file zip terkait) **tidak disertakan** di dalam repository ini.
 
