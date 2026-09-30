@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CommentBlocker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#800000',
+                        secondary: '#2D2926',
+                        tertiary: '#D4AF37',
+                        neutral: '#F9F6F2',
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-neutral text-secondary font-sans antialiased flex flex-col min-h-screen selection:bg-primary selection:text-white">
+    <!-- Gradient Background Section -->
+    <div class="absolute top-0 w-full h-[70vh] bg-gradient-to-br from-[#f8d0c8] via-[#fae6e0] to-[#F9F6F2] -z-10"></div>
+    
+    <nav class="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto w-full">
+        <div class="flex items-center space-x-2 text-primary">
+            <span class="font-bold text-2xl tracking-tight">CommentBlocker</span>
+        </div>
+        <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-500">
+            <a href="#" class="hover:text-primary transition-colors">Features</a>
+            <a href="#" class="hover:text-primary transition-colors">Pricing</a>
+            <a href="#" class="hover:text-primary transition-colors">About</a>
+            <a href="#" class="hover:text-primary transition-colors">Contact</a>
+        </div>
+    </nav>
+
+    <main class="flex-1 flex flex-col items-center justify-center px-4 mt-8 relative">
+        <div class="max-w-7xl w-full flex flex-col md:flex-row items-center justify-between gap-12">
+            
+            <div class="w-full md:w-1/2 flex flex-col items-start text-left">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/60 backdrop-blur-sm mb-6 border border-white/40 shadow-sm">
+                    <span class="w-2 h-2 rounded-full bg-primary"></span>
+                    <span class="text-xs font-medium text-gray-600">Intelligent YouTube Moderation</span>
+                </div>
+
+                <h1 class="text-4xl md:text-5xl lg:text-[54px] font-bold text-secondary leading-[1.1] mb-6">
+                    Blokir Otomatis Spam Judol dan Hate Comment di Channel YouTube Anda 24 Jam Nonstop
+                </h1>
+                
+                <p class="text-gray-600 max-w-lg text-lg mb-8 leading-relaxed">
+                   Sistem moderasi berbasis AI yang menjaga kolom komentar Anda tetap bersih dan kredibel tanpa perlu repot. Fokus pada konten, biarkan kami yang mengurus sisanya.
+                </p>
+
+                <a href="http://localhost:8000/auth/youtube" class="inline-flex items-center space-x-3 bg-primary text-white px-8 py-4 rounded-full font-semibold hover:bg-[#660000] transition-all hover:shadow-lg hover:-translate-y-0.5">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    <span>Mulai Gratis (Login with YouTube)</span>
+                </a>
+            </div>
+            
+            <div class="w-full md:w-1/2 flex justify-center relative">
+                <!-- Mockup Illustration -->
+                <div class="bg-white/80 backdrop-blur-md rounded-2xl p-6 shadow-2xl border border-white/50 w-full max-w-md transform rotate-1 hover:rotate-0 transition-transform duration-500">
+                    <div class="flex items-center space-x-2 mb-6 border-b border-gray-100 pb-4">
+                        <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L3 6v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V8.1l7-3.11v7.99z"/></svg>
+                        <span class="font-bold text-sm text-secondary">Live Moderation</span>
+                        <span class="ml-auto text-[10px] bg-gray-100 px-2 py-1 rounded-full text-gray-500 font-medium">Active</span>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <!-- Comment 1 Safe -->
+                        <div class="flex space-x-3 p-3 rounded-lg border border-gray-100 bg-white">
+                            <div class="w-8 h-8 rounded-full bg-gray-100 shrink-0"></div>
+                            <div class="flex-1 space-y-2">
+                                <div class="h-2 bg-gray-200 rounded w-1/3"></div>
+                                <div class="h-2 bg-gray-100 rounded w-3/4"></div>
+                            </div>
+                            <div class="shrink-0"><svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path></svg></div>
+                        </div>
+                        
+                        <!-- Comment 2 Spam -->
+                        <div class="flex space-x-3 p-3 rounded-lg border border-red-100 bg-red-50/30">
+                            <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center shrink-0">
+                                <span class="text-[10px]">🤖</span>
+                            </div>
+                            <div class="flex-1">
+                                <div class="text-xs font-semibold text-gray-800 mb-1">SpamBot99</div>
+                                <div class="text-xs text-gray-500 line-through">Check out my free crypto link!</div>
+                            </div>
+                            <div class="shrink-0"><svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg></div>
+                        </div>
+                        
+                        <!-- Comment 3 Safe -->
+                        <div class="flex space-x-3 p-3 rounded-lg border border-gray-100 bg-white">
+                            <div class="w-8 h-8 rounded-full bg-gray-100 shrink-0"></div>
+                            <div class="flex-1 space-y-2">
+                                <div class="h-2 bg-gray-200 rounded w-1/4"></div>
+                                <div class="h-2 bg-gray-100 rounded w-2/3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-32 max-w-5xl w-full text-center">
+            <h2 class="text-3xl font-bold text-secondary mb-4">Powerful Tools for Creators</h2>
+            <p class="text-gray-500 mb-12">Automate the tedious parts of community management so you can focus<br/>on creating great content.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left pb-20">
+                <!-- Feature 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+                    <div class="text-primary mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-lg text-secondary mb-3">Deteksi AI Akurat</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Our sophisticated machine learning models analyze context, not just keywords, to minimize false positives and catch clever spam.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+                    <div class="text-primary mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-lg text-secondary mb-3">Moderasi Real-time</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Comments are scanned and acted upon within milliseconds of being posted, keeping your comment section pristine 24/7.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+                    <div class="text-primary mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-lg text-secondary mb-3">Log & Transparansi</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Full audit trails of all moderation actions. Review deleted comments, tweak AI sensitivity, and maintain total control over your channel.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="border-t border-gray-200 bg-white">
+        <div class="max-w-7xl mx-auto px-8 py-6 flex flex-col md:flex-row items-center justify-between text-xs text-gray-500">
+            <div class="font-bold text-primary text-base mb-4 md:mb-0">CommentBlocker</div>
+            <div>© 2026 CommentBlocker. All rights reserved.</div>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
+                <a href="#" class="hover:text-primary transition-colors">Security</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

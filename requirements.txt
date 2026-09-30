@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+sqlalchemy
+psycopg2-binary
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
+google-api-python-client
+apscheduler
+scikit-learn
+pandas
+numpy
+python-dotenv
+transformers
+torch

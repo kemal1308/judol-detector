@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <title>Dashboard | CommentBlocker</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="static/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#800000',
+                        secondary: '#2D2926',
+                        tertiary: '#D4AF37',
+                        neutral: '#F9F6F2',
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body
+    class="bg-neutral text-secondary font-sans antialiased h-screen flex overflow-hidden selection:bg-primary selection:text-white">
+    <aside class="w-64 bg-[#fcfbfa] border-r border-gray-200 flex flex-col shrink-0">
+        <div class="p-6 flex items-center space-x-3 mb-4">
+            <div
+                class="w-8 h-8 rounded-lg bg-red-50 text-primary flex items-center justify-center font-bold text-lg border border-red-100">
+                J</div>
+            <div>
+                <h2 class="font-bold text-lg text-primary leading-tight">CommentBlocker</h2>
+                <p class="text-xs text-gray-500 font-medium">User</p>
+            </div>
+        </div>
+
+        <nav class="flex-1 px-4 space-y-2">
+            <a href="/dashboard" class="flex items-center px-4 py-3 bg-primary text-white rounded-xl shadow-md">
+                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z">
+                    </path>
+                </svg>
+                <span class="font-semibold text-sm">Dashboard</span>
+            </a>
+            <a href="/logs"
+                class="flex items-center px-4 py-3 text-gray-600 hover:text-primary hover:bg-red-50 rounded-xl transition-colors">
+                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z">
+                    </path>
+                </svg>
+                <span class="font-semibold text-sm">Comment Logs</span>
+            </a>
+            <a href="/settings"
+                class="flex items-center px-4 py-3 text-gray-600 hover:text-primary hover:bg-red-50 rounded-xl transition-colors">
+                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
+                    </path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+                <span class="font-semibold text-sm">Settings</span>
+            </a>
+        </nav>
+
+        <div class="p-6 mt-auto space-y-4">
+            <a href="#"
+                class="flex items-center text-sm font-semibold text-gray-600 hover:text-primary transition-colors">
+                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                    </path>
+                </svg>
+                Help Center
+            </a>
+            <button onclick="logout()"
+                class="flex items-center text-sm font-semibold text-gray-600 hover:text-primary transition-colors w-full">
+                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1">
+                    </path>
+                </svg>
+                Logout
+            </button>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col h-screen overflow-hidden relative">
+        <div class="p-10 max-w-7xl mx-auto w-full flex-1 flex flex-col overflow-hidden">
+            <div class="flex justify-between items-end mb-10 shrink-0">
+                <div>
+                    <h1 class="text-3xl font-bold text-secondary mb-2">Dashboard Overview</h1>
+                    <p class="text-gray-500">Monitoring dan analisis konten video secara real time.</p>
+                </div>
+                <div class="flex space-x-4 items-center">
+                    <div class="relative">
+                        <svg class="w-4 h-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                        <input type="text" placeholder="Search videos..."
+                            class="pl-10 pr-4 py-2 border border-gray-200 rounded-full bg-white text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-shadow w-64">
+                    </div>
+                    <button onclick="document.getElementById('add-modal').classList.remove('hidden')"
+                        class="bg-primary text-white px-5 py-2.5 rounded-full text-sm font-semibold flex items-center shadow-lg hover:bg-[#660000] transition-colors">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4">
+                            </path>
+                        </svg>
+                        Add Stream
+                    </button>
+                    <button onclick="scanNow()" id="btn-scan"
+                        class="bg-white text-primary border border-gray-200 px-5 py-2.5 rounded-full text-sm font-semibold flex items-center shadow-sm hover:bg-gray-50 transition-colors ml-2">
+                        Pindai Sekarang
+                    </button>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 shrink-0">
+                <div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm">
+                    <div class="flex justify-between items-start mb-2">
+                        <div class="text-[11px] font-bold text-gray-400 tracking-wider uppercase">Active Streams</div>
+                        <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="flex items-baseline space-x-2">
+                        <div class="text-4xl font-bold text-secondary" id="stat-active">1</div>
+                        <div class="text-xs text-primary font-medium">↑ Active</div>
+                    </div>
+                </div>
+                <div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm">
+                    <div class="flex justify-between items-start mb-2">
+                        <div class="text-[11px] font-bold text-gray-400 tracking-wider uppercase">Spam Detected</div>
+                        <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="flex items-baseline space-x-2">
+                        <div class="text-4xl font-bold text-secondary" id="stat-detected">0</div>
+                        <div class="text-xs text-gray-500 font-medium">All Time</div>
+                    </div>
+                </div>
+                <div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm">
+                    <div class="flex justify-between items-start mb-2">
+                        <div class="text-[11px] font-bold text-gray-400 tracking-wider uppercase">Comments Blocked</div>
+                        <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="flex items-baseline space-x-2">
+                        <div class="text-4xl font-bold text-secondary" id="stat-blocked">0</div>
+                        <div class="text-xs text-gray-500 font-medium">All Time</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Table -->
+            <div class="bg-white border border-gray-100 rounded-2xl flex-1 flex flex-col min-h-0 shadow-sm">
+                <div class="p-6 border-b border-gray-100 flex justify-between items-center">
+                    <h2 class="text-lg font-bold text-secondary">Monitored Videos</h2>
+                    <a href="#" class="text-primary text-sm font-semibold hover:underline">View All →</a>
+                </div>
+                <div class="overflow-auto flex-1">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr
+                                class="bg-[#faf9f8] text-gray-400 text-[10px] uppercase tracking-wider border-b border-gray-100 sticky top-0 z-10">
+                                <th class="px-6 py-4 font-bold w-1/4">VIDEO STREAM</th>
+                                <th class="px-6 py-4 font-bold">PLATFORM</th>
+                                <th class="px-6 py-4 font-bold">STATUS</th>
+                                <th class="px-6 py-4 font-bold">DETECTIONS</th>
+                                <th class="px-6 py-4 font-bold text-right">ACTIONS</th>
+                            </tr>
+                        </thead>
+                        <tbody id="video-list" class="divide-y divide-gray-100 text-sm">
+                            <!-- Injected via JS -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="p-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500 bg-[#faf9f8] rounded-b-2xl shrink-0"
+                    id="video-count">
+                    <span>Showing active monitors</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal Tambah Video -->
+    <div id="add-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-secondary/40 backdrop-blur-sm"
+            onclick="document.getElementById('add-modal').classList.add('hidden')"></div>
+        <div class="bg-white p-8 w-full max-w-md relative z-10 rounded-2xl shadow-2xl border border-gray-100">
+            <h3 class="text-2xl font-bold text-secondary mb-2">Tambah Video</h3>
+            <p class="text-sm text-gray-500 mb-8">Masukkan Video ID dari URL YouTube.</p>
+            <form id="form-add-video" onsubmit="addVideo(event)">
+                <div class="space-y-5">
+                    <div>
+                        <label class="block text-xs font-bold text-gray-500 uppercase mb-2 tracking-wide">Video
+                            ID</label>
+                        <input type="text" id="input-video-id" required
+                            class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm text-secondary focus:border-primary focus:bg-white focus:outline-none transition-all shadow-sm"
+                            placeholder="e.g. dQw4w9WgXcQ">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-gray-500 uppercase mb-2 tracking-wide">Title
+                            (Optional)</label>
+                        <input type="text" id="input-title"
+                            class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm text-secondary focus:border-primary focus:bg-white focus:outline-none transition-all shadow-sm"
+                            placeholder="My Stream">
+                    </div>
+                </div>
+                <div class="mt-8 flex justify-end space-x-3">
+                    <button type="button" onclick="document.getElementById('add-modal').classList.add('hidden')"
+                        class="px-5 py-2.5 text-sm font-semibold text-gray-500 hover:text-secondary hover:bg-gray-100 rounded-full transition-colors">Batal</button>
+                    <button type="submit"
+                        class="px-6 py-2.5 bg-primary text-white rounded-full text-sm font-bold shadow-md hover:bg-[#660000] transition-colors">Tambah</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notifications Container -->
+    <div id="toast-container" class="fixed top-5 right-5 z-50 flex flex-col items-end pointer-events-none"></div>
+
+    <script src="static/script.js"></script>
+    <script>
+        // Override video list rendering slightly for new design
+        const originalRenderVideos = window.renderVideos;
+        if (typeof originalRenderVideos === 'function') {
+            // The JS will just insert tr elements, we can keep the script logic exactly the same, 
+            // but if we want to change styles we might need to modify JS later. 
+            // For now, the existing script should inject into #video-list just fine.
+        }
+    </script>
+</body>
+
+</html>

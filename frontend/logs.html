@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Comment Logs | CommentBlocker</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#800000',
+                        secondary: '#2D2926',
+                        tertiary: '#D4AF37',
+                        neutral: '#F9F6F2',
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+<body class="bg-neutral text-secondary font-sans antialiased h-screen flex overflow-hidden selection:bg-primary selection:text-white">
+<aside class="w-64 bg-[#fcfbfa] border-r border-gray-200 flex flex-col shrink-0">
+        <div class="p-6 flex items-center space-x-3 mb-4">
+            <div class="w-8 h-8 rounded-lg bg-red-50 text-primary flex items-center justify-center font-bold text-lg border border-red-100">J</div>
+            <div>
+                <h2 class="font-bold text-lg text-primary leading-tight">CommentBlocker</h2>
+                <p class="text-xs text-gray-500 font-medium">User</p>
+            </div>
+        </div>
+
+        <nav class="flex-1 px-4 space-y-2">
+            <a href="/dashboard" class="flex items-center px-4 py-3 text-gray-600 hover:text-primary hover:bg-red-50 rounded-xl transition-colors">
+                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+                <span class="font-semibold text-sm">Dashboard</span>
+            </a>
+            <a href="/logs" class="flex items-center px-4 py-3 bg-primary text-white rounded-xl shadow-md">
+                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                <span class="font-semibold text-sm">Comment Logs</span>
+            </a>
+            <a href="/settings" class="flex items-center px-4 py-3 text-gray-600 hover:text-primary hover:bg-red-50 rounded-xl transition-colors">
+                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                <span class="font-semibold text-sm">Settings</span>
+            </a>
+        </nav>
+        
+        <div class="p-6 mt-auto space-y-4">
+            <a href="#" class="flex items-center text-sm font-semibold text-gray-600 hover:text-primary transition-colors">
+                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                Help Center
+            </a>
+            <button onclick="logout()" class="flex items-center text-sm font-semibold text-gray-600 hover:text-primary transition-colors w-full">
+                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
+                Logout
+            </button>
+        </div>
+    </aside>
+    
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col h-screen overflow-hidden relative">
+        <div class="p-10 max-w-7xl mx-auto w-full flex-1 flex flex-col overflow-hidden">
+            <div class="flex justify-between items-end mb-8 shrink-0">
+                <div>
+                    <h1 class="text-3xl font-bold text-secondary mb-2">Detected Spam Logs</h1>
+                    <p class="text-gray-500">Review and manage comments flagged by the high-confidence detection engine.</p>
+                </div>
+                <div class="flex space-x-3 items-center">
+                    <button class="bg-white text-secondary border border-gray-200 px-5 py-2.5 rounded-full text-sm font-semibold flex items-center shadow-sm hover:bg-gray-50 transition-colors">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                        Export CSV
+                    </button>
+                </div>
+            </div>
+
+            <!-- Filters -->
+            <div class="bg-white border border-gray-100 rounded-2xl p-4 mb-6 flex flex-wrap gap-4 shadow-sm shrink-0 items-center justify-between">
+                <div class="relative w-64">
+                    <svg class="w-4 h-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    <input type="text" placeholder="Search comments or authors..." class="w-full pl-10 pr-4 py-2 bg-gray-50 border border-gray-200 rounded-full text-sm focus:outline-none focus:border-primary focus:bg-white transition-colors">
+                </div>
+                <div class="flex space-x-3">
+                    <select class="bg-white border border-gray-200 text-secondary text-sm rounded-full focus:outline-none focus:border-primary block p-2 px-4 shadow-sm">
+                        <option>Status: All Detected</option>
+                        <option>Deleted</option>
+                        <option>Safe</option>
+                    </select>
+                    <select class="bg-white border border-gray-200 text-secondary text-sm rounded-full focus:outline-none focus:border-primary block p-2 px-4 shadow-sm">
+                        <option>Last 24 Hours</option>
+                        <option>Last 7 Days</option>
+                        <option>All Time</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Table -->
+            <div class="bg-white border border-gray-100 rounded-2xl flex-1 flex flex-col min-h-0 shadow-sm overflow-hidden">
+                <div class="overflow-auto flex-1">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-[#faf9f8] text-gray-500 text-[11px] font-bold uppercase tracking-wider border-b border-gray-100 sticky top-0 z-10">
+                                <th class="px-6 py-4 w-40">TIMESTAMP</th>
+                                <th class="px-6 py-4 w-48">VIDEO CONTEXT</th>
+                                <th class="px-6 py-4">COMMENT TEXT</th>
+                                <th class="px-6 py-4 w-32">AUTHOR</th>
+                                <th class="px-6 py-4 w-28 text-center">CONFIDENCE</th>
+                                <th class="px-6 py-4 w-28 text-center">STATUS</th>
+                            </tr>
+                        </thead>
+                        <tbody id="logs-list" class="divide-y divide-gray-100 text-sm">
+                            <!-- Injected via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="toast-container" class="fixed top-5 right-5 z-50 flex flex-col items-end pointer-events-none"></div>
+
+    <script src="static/script.js"></script>
+</body>
+</html>

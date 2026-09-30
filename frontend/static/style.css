@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --primary: #800000;
+  --secondary: #2D2926;
+  --tertiary: #D4AF37;
+  --neutral: #F9F6F2;
+  --bg-surface: #FFFFFF;
+  --border-light: #E5E7EB;
+  --text-main: #2D2926;
+  --text-muted: #6B7280;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--neutral);
+    color: var(--text-main);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent; 
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1; 
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8; 
+}
+
+/* Base resets for inputs */
+input:focus, button:focus {
+    outline: none;
+}
